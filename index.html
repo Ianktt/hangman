@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    #hangman {
+      font-size: 2rem;
+      margin: 20px;
+      white-space: pre;
+    }
+    #word {
+      font-size: 1.5rem;
+      margin: 20px;
+    }
+    #guessed {
+      margin: 20px;
+    }
+    input[type="text"] {
+      font-size: 1.2rem;
+      padding: 5px;
+    }
+    button {
+      font-size: 1.2rem;
+      padding: 5px;
+      cursor: pointer;
+    }
+    #message {
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hangman Game</h1>
+  <!-- Hangman visualization -->
+  <div id="hangman"></div>
+  <!-- Display the word with underscores -->
+  <div id="word">_ _ _ _ _</div>
+  <!-- Guessed vowels -->
+  <div id="guessedVowels">Guessed Vowels: None</div>
+  <!-- Guessed consonants -->
+  <div id="guessedConsonants">Guessed Consonants: None</div>
+   <!-- Guessed words -->
+   <div id="guessedWords">Guessed Words: None</div>
+  <!-- Input field for guesses -->
+  <input type="text" id="guessInput" placeholder="Enter a letter or word">
+  <button onclick="makeGuess()">Submit Guess</button>
+  <p id="message"></p>
+  <button id="playAgainButton" style="display: none;" onclick="startNewGame()">Play Again</button>
+</body>
+<script src="hangman.js"></script>
+</html>
